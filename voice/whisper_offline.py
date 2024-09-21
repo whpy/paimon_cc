@@ -3,9 +3,9 @@ f = open("../examples/kk.kt")
 key = "sk-"+f.read()
 client = OpenAI(api_key=key)
 
-audio_file= open("output.wav", "rb")
-translation = client.audio.translations.create(
+audio_file= open("../examples/output.wav", "rb")
+translation = client.audio.transcriptions.create(
   model="whisper-1", 
   file=audio_file
 )
-print(translation.text)
+print("recognized text: "translation.text)
