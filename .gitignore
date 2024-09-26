@@ -1,1 +1,6 @@
+# ******
 *.kt
+*.csrf
+
+# large size files
+*.pt
